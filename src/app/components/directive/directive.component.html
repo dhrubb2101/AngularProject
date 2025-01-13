@@ -1,0 +1,48 @@
+<p>directive works!</p>
+
+<!-- use of *ngIf directive -->
+
+<h2 *ngIf="isCondA">Output of *ngIf Directive.</h2>
+<div *ngIf="hasValue; then truepart; else falsepart"></div>
+
+<ng-template #truepart>
+  <strong>Admin Login Successfully</strong> <br />
+</ng-template>
+<ng-template #falsepart>
+  <strong>User Login Successfully</strong>
+</ng-template>
+
+<!-- use of *ngFor directive -->
+<ul>
+  <li *ngFor="let course of courses">{{ course }}</li>
+  <li>Css</li>
+  <li>Bootstrap</li>
+</ul>
+
+<!-- use of *ngSwitchCase directive -->
+<!-- //to make it static we can use the following code -->
+<!-- <div [ngSwitch]="selectedCourse">
+  <div *ngFor="let course of courses">
+    <div *ngSwitchCase="'course'">You have Selected {{ course }}</div>
+  </div>
+  <div *ngSwitchCase="'Html'">You have Selected HTML</div>
+  <div *ngSwitchCase="'Css'">You have Selected CSS</div>
+  <div *ngSwitchCase="'Bootstrap'">You have Selected Bootstrap</div>
+  <div *ngSwitchCase="'Javascript'">You have selected Javascript</div>
+  <div *ngSwitchCase="'Angular'">You have Selected Angular</div>
+  <div *ngSwitchCase="'React'">You have Selected Angular</div>
+  <div *ngSwitchCase="'Vue'">You have Selected HTML</div>
+  <div *ngSwitchDefault>Invalid Choice</div>
+</div> -->
+
+<!-- //to make it dynamic we can use the following code -->
+<div [ngSwitch]="selectedCourse">
+  <div *ngFor="let course of courses">
+    <div *ngSwitchCase="course">You have Selected {{ course }}</div>
+  </div>
+  <div *ngSwitchDefault>Invalid Choice</div>
+</div>
+<hr />
+<div [ngStyle]="myStyle">Use of ngStyle directives</div>
+<div [ngClass]="myClass">Use of ngStyle directives</div>
+<!-- <button type="button" (click)="changeMyStyle()">change my style</button> -->

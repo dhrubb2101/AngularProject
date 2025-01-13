@@ -1,0 +1,14 @@
+<p>databinding works!</p>
+<!-- use of interpolation  -->
+<div>My name is : {{ myName }}</div>
+<div>multiplication: {{ 2 * 5 }}</div>
+<hr />
+<!-- use of property binding -->
+<input [type]="myInputType" name="txt1" />
+<!-- use of event binding -->
+<button type="button" (click)="greeting('Friends')">
+  click on me for Help
+</button>
+<input type="text" name="myitem" [(ngModel)]="breakfast" />{{ breakfast }}
+<hr />
+<img [src]="imgPath" [alt]="imgName" height="300px" width="600px" />

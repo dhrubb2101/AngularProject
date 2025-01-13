@@ -1,0 +1,24 @@
+<p>task-three works!</p>
+
+<div>
+  <h2>Select a Course!</h2>
+  <button (click)="selectCourse('FrontEnd Course')">FrontEnd Course</button>
+  <button (click)="selectCourse('BackEnd Course')">BackEnd Course</button>
+
+  <hr *ngIf="selectedCourse" />
+  <br />
+
+  <p *ngIf="selectedCourse">You have selected {{ selectedCourse }}</p>
+  <ul *ngIf="selectedCourse === 'FrontEnd Course'">
+    <li *ngFor="let language of frontEndCourses">
+      <button (click)="selectLanguage(language)">{{ language }}</button>
+    </li>
+  </ul>
+  <ul *ngIf="selectedCourse === 'BackEnd Course'">
+    <li *ngFor="let language of backEndCourses">
+      <button (click)="selectLanguage(language)">{{ language }}</button>
+    </li>
+  </ul>
+
+  <p *ngIf="selectedLanguage">You have selected {{ selectedLanguage }}</p>
+</div>

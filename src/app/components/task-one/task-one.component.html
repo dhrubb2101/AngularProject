@@ -1,0 +1,45 @@
+<p>task-one works!</p>
+
+<div>
+  <h2>{{ CelebrityName }}</h2>
+  <img [src]="CelebrityImage" alt="{{ CelebrityName }}" width="300px" />
+  <br />
+  <hr />
+</div>
+<div>
+  <button
+    type="button"
+    (click)="toggleCelebrity('Prabhas', 'Assets/prabhas.jpg')"
+  >
+    Prabhas
+  </button>
+  <button
+    type="button"
+    (click)="toggleCelebrity('Katrina', 'Assets/katrina.jpg')"
+  >
+    Katrina Kaif
+  </button>
+  <button type="button" (click)="toggleCelebrity('Kiara', 'Assets/kiara.jpg')">
+    Kiara
+  </button>
+  <button
+    type="button"
+    (click)="toggleCelebrity('Rajnikanth', 'Assets/rajnikanth.jpg')"
+  >
+    Rajnikanth the boss
+  </button>
+  <button
+    type="button"
+    (click)="toggleCelebrity('salman', 'Assets/salman.jpg')"
+  >
+    salman khan
+  </button>
+  <button
+    type="button"
+    (click)="toggleCelebrity('shahrukh', 'Assets/Shahrukh.jpg')"
+  >
+    Shahrukh Khan
+  </button>
+  <hr />
+  <br />
+</div>
