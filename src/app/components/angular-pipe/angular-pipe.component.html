@@ -4,3 +4,36 @@
 <p>{{ msg | uppercase }}</p>
 <p>{{ msg | lowercase }}</p>
 <p>{{ msg | titlecase }}</p>
+<p>{{ msg | slice : 5 : 20 }}</p>
+
+<!-- Json Pipe -->
+<p>{{ employee | json }}</p>
+
+<!-- Number pipe -->
+<p>{{ 567 | number : "3.3 - 4" }}</p>
+<!-- //output: 567.000 -->
+<p>{{ 0.567 | number : "3.3 - 4" }}</p>
+<p>{{ 0.567 | number : "3.2 - 3" }}</p>
+<p>{{ 0.567 | number : "3.1 - 2" }}</p>
+<!-- //output: 0.57 -->
+
+<!-- Currency pipe -->
+<div>{{ 100 | currency }}</div>
+<div>{{ 100 | currency : "GBP" }}</div>
+<div>{{ 100 | currency : "INR" }}</div>
+
+<!-- date pipe -->
+<p>{{ dobj }}</p>
+<p>{{ dobj | date }}</p>
+<p>{{ dobj | date : "shortDate" }}</p>
+<p>{{ dobj | date : "longDate" }}</p>
+<p>{{ dobj | date : "dd-MM-yyyy" }}</p>
+
+<!-- use of custom pipe -->
+<div>{{ 2 | mycubeCustomPipe }}</div>
+
+<!-- use of custom(mysquare) pipe -->
+<div>{{ 2 | mySquareCusomPipe }}</div>
+
+<!-- use of custom(areaofcircle) pipe -->
+<div>{{ 2 | areaOfCircleCusomPipe }}</div>
