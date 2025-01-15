@@ -1,0 +1,19 @@
+<p>parent-component works!</p>
+<hr />
+<hr />
+<app-child-component></app-child-component>
+
+<form class="box">
+  <p>{{ childData }}</p>
+  <label class="form-label">Enter your Message</label><br />
+  <textarea name="pmsg" #pmsg id=""></textarea>
+  <button type="button" (click)="getData(pmsg.value)" class="btn btn-primary">
+    Send
+  </button>
+</form>
+
+<hr />
+<app-child-component
+  (eventObj)="childData = $event"
+  [parentData]="pdata"
+></app-child-component>

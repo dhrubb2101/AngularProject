@@ -37,3 +37,20 @@
 
 <!-- use of custom(areaofcircle) pipe -->
 <div>{{ 2 | areaOfCircleCusomPipe }}</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of friends">
+      <td>{{ f.name | myGenderCustomPipe : f.gender }}</td>
+      <td>{{ f.gender }}</td>
+      <td>{{ f.address }}</td>
+    </tr>
+  </tbody>
+</table>
