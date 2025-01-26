@@ -1,1 +1,122 @@
 <p>udtdf works!</p>
+
+<!-- <div class="row">
+    <div class="col-6 bg-primary">hello</div>
+    <div class="col-6 bg-danger">hello</div>
+    <div class="col-6 bg-info">hello</div>
+  </div> -->
+<!-- <div class="row">
+    <div class="col-4 bg-primary">hello</div>
+    <div class="col-4 bg-danger">hello</div>
+    <div class="col-4 bg-info">hello</div>
+  </div> -->
+<!-- <div class="row">
+    <div class="col-sm-6 bg-primary">hello</div>
+    <div class="col-sm-6 bg-primary">hello</div>
+  </div> -->
+<form #udtdf="ngForm" (ngSubmit)="getData(udtdf.value)">
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="form-label" for="username">Enter UserName :</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        class="form-control"
+        #refuname="ngModel"
+        [ngModel]="username"
+        pattern="[a-zA-Z]*{3,15}"
+        required
+      />
+      <!-- {{ refuname.className }} -->
+      <div
+        class="alert alert-danger"
+        *ngIf="refuname.touched && refuname.invalid"
+      >
+        <div *ngIf="refuname.hasError('required')">This field is required</div>
+        <div *ngIf="refuname.hasError('pattern')">
+          Username field must contain only character min-3 and max-15
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <label class="form-label" for="username">Enter UserPassword :</label>
+      <input
+        type="text"
+        id="userpass"
+        name="userpass"
+        class="form-control"
+        #refupass="ngModel"
+        [ngModel]="userpass"
+        pattern="^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{6,16}$"
+        required
+      />
+      <!-- {{ refuname.className }} -->
+      <div
+        class="alert alert-danger"
+        *ngIf="refupass.touched && refupass.invalid"
+      >
+        <div *ngIf="refupass.hasError('required')">This field is required</div>
+        <div *ngIf="refupass.hasError('pattern')">
+          password field must contain 1 special character ,1 number and 1
+          capital letter , and it must be 6-16 character long.
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <label class="form-label">Enter Email :</label>
+      <input
+        type="text"
+        id="useremail"
+        name="useremail"
+        class="form-control"
+        #refemail="ngModel"
+        [ngModel]="useremail"
+        pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$"
+        required
+      />
+      <!-- {{ refuname.className }} -->
+      <div
+        class="alert alert-danger"
+        *ngIf="refemail.touched && refemail.invalid"
+      >
+        <div *ngIf="refemail.hasError('required')">This field is required</div>
+        <div *ngIf="refemail.hasError('pattern')">
+          Email field must be in proper format.
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <label class="form-label-check mt-5">
+        <input
+          type="checkbox"
+          id="term"
+          name="term"
+          class="form-check-input"
+          #refterm="ngModel"
+          [ngModel]="term"
+          required
+        />
+        I Accept Terms and Conditions
+        <!-- {{ refuname.className }} -->
+        <div
+          class="alert alert-danger"
+          *ngIf="refterm.touched && refterm.invalid"
+        >
+          <div *ngIf="refterm.hasError('required')">This field is required</div>
+        </div>
+      </label>
+    </div>
+    <div>
+      <div class="col-sm-6">
+        <button
+          class="btn btn-primary mt-3"
+          [disabled]="udtdf.invalid"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

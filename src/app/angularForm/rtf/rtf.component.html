@@ -1,1 +1,90 @@
 <p>rtf works!</p>
+
+<form [formGroup]="userForm">
+  <div class="row">
+    <div class="col-sm-6">
+      <label class="form-label">Enter User Name:</label>
+      <input
+        type="text"
+        name="userName"
+        formControlName="userName"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          userForm.get('userName').invalid && userForm.get('userName').touched
+        "
+      ></div>
+      <div *ngIf="userForm.get('userName').errors.required">
+        this field is required
+      </div>
+      <div *ngIf="userForm.get('userName').errors.pattern">
+        Username must only contain character.
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <label class="form-label">Enter User Email :</label>
+      <input
+        type="text"
+        name="userEmail"
+        formControlName="userEmail"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          userForm.get('userEmail').invalid && userForm.get('userEmail').touched
+        "
+      ></div>
+      <div *ngIf="userForm.get('userEmail').errors.required">
+        this field is required
+      </div>
+      <div *ngIf="userForm.get('userEmail').errors.pattern">
+        UserEmail must only contain a valid email address.
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <label class="form-label">Enter password:</label>
+      <input
+        type="text"
+        name="userPassword"
+        formControlName="userPassword"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          userForm.get('userPassword').invalid &&
+          userForm.get('userPassword').touched
+        "
+      ></div>
+      <div *ngIf="userForm.get('userPassword').errors.required">
+        this field is required
+      </div>
+      <div *ngIf="userForm.get('userPassword').errors.pattern">
+        password must only contain min 6 characters to max 16 and use a special
+        character,a number, a cap, a small letter.
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <label class="form-label">Enter Term:</label>
+      <input
+        type="text"
+        name="term"
+        formControlName="term"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="userForm.get('term').invalid && userForm.get('term').touched"
+      ></div>
+      <div *ngIf="userForm.get('term').errors.required">
+        this field is required
+      </div>
+      <div *ngIf="userForm.get('term').errors.pattern">
+        Username must only contain number.
+      </div>
+    </div>
+  </div>
+</form>

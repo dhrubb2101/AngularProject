@@ -1,0 +1,33 @@
+<p>product-dash works!</p>
+
+<table class="table table-hover table-border table-striped">
+  <thead>
+    <tr>
+      <th>Sr. no</th>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Price</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <button type="button" btn btn-primary btn-sm>Add</button>
+    <tr *ngFor="let product of productArray; let ind = index"></tr>
+    <td>{{ ind + 1 }}</td>
+    <td>{{ product.pname }}</td>
+    <td>{{ product.pcompany }}</td>
+    <td>{{ product.pprice }}</td>
+    <td>{{ product.address }}</td>
+    <td>
+      <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+      <button
+        type="button"
+        (click)="deleteData(product.id)"
+        class="btn btn-outline-danger btn-sm"
+      >
+        Delete
+      </button>
+    </td>
+  </tbody>
+</table>

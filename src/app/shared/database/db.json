@@ -1,0 +1,15 @@
+{
+    "products":[
+        {"id":101,"pname":"Laptop","pcompany":"hp","pprice":58000,"address":"Bangalore"},
+        {"id":102,"pname":"Mouse","pcompany":"iball","pprice":20000,"address":"Mumbai"},
+        {"id":103,"pname":"keyboard","pcompany":"Toshiba","pprice":500,"address":"Nagpur"},
+        {"id":104,"pname":"USB","pcompany":"Sony","pprice":10000,"address":"Bengaluru"},
+        {"id":105,"pname":"Adaptor","pcompany":"Macro","pprice":3000,"address":"Chennai"}
+        
+    ],
+    "users":[
+        {"id":1,"uid":"admin@gmail.com","pass":"admin@123"},
+        {"id":2,"uid":"king@gmail.com","pass":"king@123"},
+        {"id":3,"uid":"hero@gmail.com","pass":"hero@123"}
+    ]
+}

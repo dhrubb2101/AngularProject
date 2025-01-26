@@ -10,6 +10,7 @@ import { ParentComponentComponent } from './components/parent-component/parent-c
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { AngFormComponent } from './angularForm/ang-form/ang-form.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
