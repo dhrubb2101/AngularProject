@@ -23,7 +23,7 @@ export class DirectiveComponent {
   }
 
   myClass={
-    'txtprimary':this.isCondB,
+    'txtprimary':this.isCondB,  
     'txtdanger':!this.isCondB,
     'special':this.isCondB
 }

@@ -10,11 +10,12 @@ import { ParentComponentComponent } from './components/parent-component/parent-c
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { AngFormComponent } from './angularForm/ang-form/ang-form.component';
+import { ChildComponentComponent } from './components/child-component/child-component.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,DatabindingComponent,DirectiveComponent,ToggleimgComponent,AngularPipeComponent,TaskOneComponent,TaskThreeComponent,ParentComponentComponent,PageNotFoundComponent,RouterModule,AngFormComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 

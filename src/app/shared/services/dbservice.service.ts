@@ -19,4 +19,18 @@ export class DbserviceService {
   deleteRecord(tableName:any, id:number){
     return this.http.delete(`${this.baseURL}/${tableName}/${id}`);
   }
+
+  //post request
+  addRecord(tableName:any, data:any){
+    return this.http.post(`${this.baseURL}/${tableName}`,data);
+  }
+
+  //getrequest for single user
+  getSingleRecord(tableName:any, id:any){
+    return this.http.get(`${this.baseURL}/${tableName}/${id}`);
+  }
+  //update request
+  updateRecord(tableName:any, id:any,data:any){
+    return this.http.put(`${this.baseURL}/${tableName}/${id}`,data);
+  }
 }

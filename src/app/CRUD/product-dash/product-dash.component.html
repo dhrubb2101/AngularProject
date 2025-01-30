@@ -12,7 +12,12 @@
     </tr>
   </thead>
   <tbody>
-    <button type="button" btn btn-primary btn-sm>Add</button>
+    <a
+      routerLink="/maindashboard/productadd"
+      class="btn btn-primary btn-sm mb-2"
+    >
+      <i class="fa fa-plus" aria-hidden="true"></i>Add
+    </a>
     <tr *ngFor="let product of productArray; let ind = index"></tr>
     <td>{{ ind + 1 }}</td>
     <td>{{ product.pname }}</td>
@@ -20,13 +25,18 @@
     <td>{{ product.pprice }}</td>
     <td>{{ product.address }}</td>
     <td>
-      <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+      <a
+        [routerLink]="['maindashboard/productedit', product.id]"
+        class="btn btn-outline-success btn-sm"
+      >
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      </a>
       <button
         type="button"
         (click)="deleteData(product.id)"
         class="btn btn-outline-danger btn-sm"
       >
-        Delete
+        <i class="fa fa-trash" aria-hidden="true"></i>
       </button>
     </td>
   </tbody>

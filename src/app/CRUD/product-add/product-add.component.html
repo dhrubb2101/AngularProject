@@ -1,1 +1,53 @@
 <p>product-add works!</p>
+
+<form #frmData="ngForm" (ngSubmit)="sendData(frmData.value)">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <label class="form-label">Enter Product Name:</label>
+      <input
+        type="text"
+        name="pname"
+        [(ngModel)]="pname"
+        vlass="form-control"
+        required
+      />
+
+      <label class="form-label">Enter Company Name:</label>
+      <input
+        type="text"
+        name="pcompany"
+        [(ngModel)]="pcompany"
+        vlass="form-control"
+        required
+      />
+
+      <label class="form-label">Enter Product Price:</label>
+      <input
+        type="text"
+        name="pprice"
+        [(ngModel)]="pprice"
+        vlass="form-control"
+        required
+      />
+
+      <label class="form-label">Enter Address Name:</label>
+      <input
+        type="text"
+        name="address"
+        [(ngModel)]="address"
+        vlass="form-control"
+        required
+      />
+
+      <button
+        type="submit"
+        class="btn btn-primary mt-2"
+        [disabled]="frmData.invalid"
+      >
+        Submit
+      </button>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</form>
