@@ -8,6 +8,7 @@ import { UdtdfComponent } from './angularForm/udtdf/udtdf.component';
 import { RtfComponent } from './angularForm/rtf/rtf.component';
 import { MainDashBoardComponent } from './layout/main-dash-board/main-dash-board.component';
 import { LoginComponent } from './layout/login/login.component';
+import { ServiceDataComponent } from './components/service-data/service-data.component';
 
 
 export const routes: Routes = [
@@ -20,6 +21,7 @@ export const routes: Routes = [
   //3.Redirect routing
   { path: "", redirectTo: "mypipe",pathMatch:"full"},
   { path: "mypipe", component : AngularPipeComponent},
+  { path: "serviceData", component : ServiceDataComponent},
   //4.Parameter Routing
   // { path:"parent/:id",component : ParentComponentComponent},
   {path:"parent",component : ParentComponentComponent},

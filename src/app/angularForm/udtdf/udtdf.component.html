@@ -40,21 +40,21 @@
       </div>
     </div>
     <div class="col-sm-6">
-      <label class="form-label" for="username">Enter UserPassword :</label>
+      <label class="form-label" for="userpass">Enter UserPassword :</label>
       <input
         type="text"
         id="userpass"
         name="userpass"
         class="form-control"
         #refupass="ngModel"
-        [ngModel]="userpass"
+        [(ngModel)]="userpass"
         pattern="^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{6,16}$"
         required
       />
       <!-- {{ refuname.className }} -->
       <div
         class="alert alert-danger"
-        *ngIf="refupass.touched && refupass.invalid"
+        *ngIf="refupass.invalid && refupass.touched"
       >
         <div *ngIf="refupass.hasError('required')">This field is required</div>
         <div *ngIf="refupass.hasError('pattern')">
@@ -72,7 +72,7 @@
         class="form-control"
         #refemail="ngModel"
         [ngModel]="useremail"
-        pattern="^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$"
+        pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&])[a-zA-Z0-9!@#$%^&]{6,16}$"
         required
       />
       <!-- {{ refuname.className }} -->
