@@ -7,6 +7,7 @@ import { AngFormComponent } from './angularForm/ang-form/ang-form.component';
 import { UdtdfComponent } from './angularForm/udtdf/udtdf.component';
 import { RtfComponent } from './angularForm/rtf/rtf.component';
 import { MainDashBoardComponent } from './layout/main-dash-board/main-dash-board.component';
+import { LoginComponent } from './layout/login/login.component';
 
 
 export const routes: Routes = [
@@ -22,6 +23,9 @@ export const routes: Routes = [
   //4.Parameter Routing
   // { path:"parent/:id",component : ParentComponentComponent},
   {path:"parent",component : ParentComponentComponent},
+
+  {path:"login",component : LoginComponent},
+
     //5.Child Routing
   {path: "angform",component : AngFormComponent , children: [
     // {path: "",component : UdtdfComponent},
