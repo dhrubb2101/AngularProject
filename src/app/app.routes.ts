@@ -9,6 +9,9 @@ import { RtfComponent } from './angularForm/rtf/rtf.component';
 import { MainDashBoardComponent } from './layout/main-dash-board/main-dash-board.component';
 import { LoginComponent } from './layout/login/login.component';
 import { ServiceDataComponent } from './components/service-data/service-data.component';
+import { ProductDashComponent } from './CRUD/product-dash/product-dash.component';
+import { ProductAddComponent } from './CRUD/product-add/product-add.component';
+import { ProductEditComponent } from './CRUD/product-edit/product-edit.component';
 
 
 export const routes: Routes = [
@@ -19,9 +22,12 @@ export const routes: Routes = [
   //1.Naming Routing
   { path: "directive", component : DirectiveComponent},
   //3.Redirect routing
-  { path: "", redirectTo: "mypipe",pathMatch:"full"},
+  { path: "", redirectTo: "login",pathMatch:"full"},
   { path: "mypipe", component : AngularPipeComponent},
   { path: "serviceData", component : ServiceDataComponent},
+  { path: "productDash", component: ProductDashComponent},
+  { path: "productAdd", component: ProductAddComponent},
+  { path: "productEdit", component: ProductEditComponent },
   //4.Parameter Routing
   // { path:"parent/:id",component : ParentComponentComponent},
   {path:"parent",component : ParentComponentComponent},

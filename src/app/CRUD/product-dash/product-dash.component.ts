@@ -16,17 +16,7 @@ export class ProductDashComponent {
   product: any;
   ind: any;
 
-  deleteData(id:any){
-    if(window.confirm(`Are you sure to delete record in which ID ${id} is mentioned`)){
-      this.productData.deleteRecord("products",id).subscribe(()=>{
-        window.alert("Record Deleted Successfully");
-        this.fetchData();
-          
-        })
-
-    }
-    
-  }
+  
 
   ngOnInit(){
     this.fetchData();
@@ -39,6 +29,18 @@ export class ProductDashComponent {
       //console.log(res);
       this.productArray=res
     })
+  }
+
+  deleteData(id:any){
+    if(window.confirm(`Are you sure to delete record in which ID ${id} is mentioned`)){
+      this.productData.deleteRecord("products",id).subscribe(()=>{
+        window.alert("Record Deleted Successfully");
+        this.fetchData();
+          
+        })
+
+    }
+    
   }
 
 }
