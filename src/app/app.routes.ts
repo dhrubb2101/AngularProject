@@ -12,17 +12,21 @@ import { ServiceDataComponent } from './components/service-data/service-data.com
 import { ProductDashComponent } from './CRUD/product-dash/product-dash.component';
 import { ProductAddComponent } from './CRUD/product-add/product-add.component';
 import { ProductEditComponent } from './CRUD/product-edit/product-edit.component';
+import { authGuard } from './shared/guard/auth.guard';
 
 
 export const routes: Routes = [
+  {path:"login",component : LoginComponent},
+  {path:"",component : LoginComponent},
 
-  {path: "maindashboard", component: MainDashBoardComponent , children: [
+  // { path: "", redirectTo: "login",pathMatch:"full"},
+
+  {path: "maindashboard", component: MainDashBoardComponent , canActivate:[authGuard], children: [
     //2.Default Routing
   //{ path: "", component: DirectiveComponent},
   //1.Naming Routing
   { path: "directive", component : DirectiveComponent},
   //3.Redirect routing
-  { path: "", redirectTo: "login",pathMatch:"full"},
   { path: "mypipe", component : AngularPipeComponent},
   { path: "serviceData", component : ServiceDataComponent},
   { path: "productDash", component: ProductDashComponent},
@@ -32,7 +36,7 @@ export const routes: Routes = [
   // { path:"parent/:id",component : ParentComponentComponent},
   {path:"parent",component : ParentComponentComponent},
 
-  {path:"login",component : LoginComponent},
+  // {path:"login",component : LoginComponent},
 
     //5.Child Routing
   {path: "angform",component : AngFormComponent , children: [

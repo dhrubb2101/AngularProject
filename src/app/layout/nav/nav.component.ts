@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -10,4 +10,13 @@ import { RouterLink } from '@angular/router';
 })
 export class NavComponent {
 
+constructor(private _router:Router){}
+
+
+  signOut(){
+    if(window.confirm("Are you sure to signout")){
+      sessionStorage.clear();
+      this._router.navigate(["/"]);
+    }
+  }
 }
