@@ -1,8 +1,9 @@
-import { Component, Inject } from '@angular/core';
-import { Route, Router, RouterOutlet } from '@angular/router';
+import { Component, inject, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DbserviceService } from '../../shared/services/dbservice.service';
-@Component({
+
+  @Component({
   selector: 'app-login',
   imports: [FormsModule],
   templateUrl: './login.component.html',
@@ -12,7 +13,7 @@ export class LoginComponent {
 
 userid:string='';
 userpass:string='';
-userData= Inject(DbserviceService);
+userData= inject(DbserviceService); 
 
 serverUserData:any;
 
@@ -20,7 +21,7 @@ constructor(private _router:Router){}
 
 signIn(){
   // console.log(this.userid,this.userpass);
-  this.userData.getRecord("users").subscribe((res:any)=>{
+  this.userData.getRecord("users").subscribe((res)=>{
     // console.log(res);
     this.serverUserData =res;
     let data = this.serverUserData.filter((val:any)=>{return val.uid===this.userid && val.pass===this.userpass});
