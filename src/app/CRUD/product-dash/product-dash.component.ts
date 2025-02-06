@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject ,TemplateRef } from '@angular/core';
 import { DbserviceService } from '../../shared/services/dbservice.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 
 @Component({

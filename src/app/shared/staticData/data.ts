@@ -7,6 +7,7 @@ let data={
     jalebi:"Assets/jalebi.jpg", 
     idli:"Assets/idli.jpg",
     samosaimage:"Assets/samosa.jpg",
+    PagenotFound:"Assets/CodePen-404-Page.gif"
 
 }
 

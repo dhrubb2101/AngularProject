@@ -1,0 +1,15 @@
+.page-not-found-title{
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700
+}
+
+.page-not-found-link{
+    text-align: center;
+    display: block;
+    color: green;
+    font-size: larger;
+    font-style: italic;
+    margin-top: 5px;
+}
