@@ -1,10 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterLink],
+  imports: [RouterLink,MatButtonModule,MatIconModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })

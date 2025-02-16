@@ -13,6 +13,7 @@ import { ProductDashComponent } from './CRUD/product-dash/product-dash.component
 import { ProductAddComponent } from './CRUD/product-add/product-add.component';
 import { ProductEditComponent } from './CRUD/product-edit/product-edit.component';
 import { authGuard } from './shared/guard/auth.guard';
+import { DatalistComponent } from './components/datalist/datalist.component';
 
 
 export const routes: Routes = [
@@ -32,6 +33,7 @@ export const routes: Routes = [
   { path: "productDash", component: ProductDashComponent},
   { path: "productAdd", component: ProductAddComponent},
   { path: "productEdit", component: ProductEditComponent },
+  { path: "datalist", component: DatalistComponent},
   //4.Parameter Routing
   // { path:"parent/:id",component : ParentComponentComponent},
   {path:"parent",component : ParentComponentComponent},
